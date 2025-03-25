@@ -1,0 +1,80 @@
+2025-03-14 23:48:48,074 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-14 23:49:55,805 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-14 23:51:11,088 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-14 23:51:49,767 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-14 23:53:09,463 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-14 23:58:07,760 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-15 00:00:23,744 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-15 00:01:35,852 - mem0_logger - INFO - Retrieving successful patterns from memory
+2025-03-15 00:01:35,852 - mem0_logger - WARNING - Memory client not initialized
+2025-03-15 00:01:36,753 - mem0_logger - INFO - Retrieving error patterns from memory
+2025-03-15 00:01:36,753 - mem0_logger - WARNING - Memory client not initialized
+2025-03-15 00:02:08,674 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-15 00:03:11,173 - mem0_logger - INFO - Retrieving successful patterns from memory
+2025-03-15 00:03:11,174 - mem0_logger - WARNING - Memory client not initialized
+2025-03-15 00:03:11,969 - mem0_logger - INFO - Retrieving error patterns from memory
+2025-03-15 00:03:11,969 - mem0_logger - WARNING - Memory client not initialized
+2025-03-15 00:04:34,310 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-15 00:05:42,941 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-15 00:06:48,182 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-15 00:10:50,032 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-15 00:12:04,583 - mem0_logger - ERROR - Error getting embedding: AsyncEmbeddings.create() got an unexpected keyword argument 'api_key'
+Traceback (most recent call last):
+  File "/Users/varunisrani/Desktop/Archon/archon/pydantic_ai_coder.py", line 882, in get_embedding
+    response = await openai_client.embeddings.create(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncEmbeddings.create() got an unexpected keyword argument 'api_key'
+2025-03-15 00:13:45,196 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-15 00:14:37,436 - mem0_logger - ERROR - Error getting embedding: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Traceback (most recent call last):
+  File "/Users/varunisrani/Desktop/Archon/archon/pydantic_ai_coder.py", line 881, in get_embedding
+    response = await openai_client.embeddings.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/resources/embeddings.py", line 238, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1849, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1543, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1644, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-03-15 00:14:38,473 - mem0_logger - ERROR - Error getting embedding: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Traceback (most recent call last):
+  File "/Users/varunisrani/Desktop/Archon/archon/pydantic_ai_coder.py", line 881, in get_embedding
+    response = await openai_client.embeddings.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/resources/embeddings.py", line 238, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1849, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1543, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1644, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-03-15 00:16:11,952 - mem0_logger - INFO - Mem0 client initialized successfully
+2025-03-15 00:17:07,715 - mem0_logger - ERROR - Error getting embedding: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+Traceback (most recent call last):
+  File "/Users/varunisrani/Desktop/Archon/archon/pydantic_ai_coder.py", line 888, in get_embedding
+    response = await openai_client.embeddings.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/resources/embeddings.py", line 238, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1849, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1543, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1644, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-03-15 11:09:02,483 - mem0_logger - INFO - Mem0 client initialized successfully

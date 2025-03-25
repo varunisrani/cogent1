@@ -1,0 +1,12 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+websockets==12.0
+pydantic==2.5.2
+python-dotenv==1.0.0
+logfire==3.8.0
+httpx==0.24.1
+supabase==2.0.3
+openai==1.3.7
+langgraph==0.0.15
+pydantic-ai==0.0.1
+crewai==0.11.0 

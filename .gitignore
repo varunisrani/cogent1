@@ -1,0 +1,18 @@
+# Folders
+workbench
+__pycache__
+venv
+.langgraph_api
+
+# Files
+.env
+.env.temp
+.env.test
+env_vars.json
+.qodo
+.streamlit/secrets.toml
+
+# API keys and secrets
+*.pem
+*_key.json
+credentials.json

@@ -1,0 +1,35 @@
+2025-03-19 22:02:14,519 - streamlit_ui - INFO - Starting report processing
+2025-03-19 22:02:14,519 - streamlit_ui - INFO - Read logs file: 31338 characters
+2025-03-19 22:02:14,519 - streamlit_ui - INFO - Read input file: 79 characters
+2025-03-19 22:02:14,520 - streamlit_ui - INFO - Read output file: 4023 characters
+2025-03-19 22:02:14,520 - streamlit_ui - INFO - Initialized state with file contents
+2025-03-19 22:02:14,520 - streamlit_ui - INFO - Invoking report flow
+2025-03-19 22:02:14,529 - streamlit_ui - ERROR - Error processing reports: Checkpointer requires one or more of the following 'configurable' keys: ['thread_id', 'checkpoint_ns', 'checkpoint_id']
+Traceback (most recent call last):
+  File "/Users/varunisrani/Desktop/Archon/report_agents/streamlit_report_ui.py", line 112, in process_reports
+    result = await report_flow.ainvoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/langgraph/pregel/__init__.py", line 2195, in ainvoke
+    async for chunk in self.astream(
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/langgraph/pregel/__init__.py", line 2007, in astream
+    ) = self._defaults(
+        ^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/langgraph/pregel/__init__.py", line 1531, in _defaults
+    raise ValueError(
+ValueError: Checkpointer requires one or more of the following 'configurable' keys: ['thread_id', 'checkpoint_ns', 'checkpoint_id']
+2025-03-19 22:04:08,090 - streamlit_ui - INFO - Starting report processing
+2025-03-19 22:04:08,091 - streamlit_ui - INFO - Read logs file: 31338 characters
+2025-03-19 22:04:08,092 - streamlit_ui - INFO - Read input file: 79 characters
+2025-03-19 22:04:08,094 - streamlit_ui - INFO - Read output file: 4023 characters
+2025-03-19 22:04:08,094 - streamlit_ui - INFO - Initialized state with file contents
+2025-03-19 22:04:08,095 - streamlit_ui - INFO - Invoking report flow with thread ID: 4968bb33-1f33-4f92-90db-c1e7f7911c88
+2025-03-19 22:04:18,178 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 22:04:26,142 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 22:04:30,994 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 22:04:34,128 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 22:04:41,435 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 22:05:01,263 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 22:05:10,992 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 22:05:22,090 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 22:05:30,653 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-19 22:05:30,665 - streamlit_ui - INFO - Report flow completed

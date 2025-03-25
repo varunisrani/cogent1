@@ -1,0 +1,21 @@
+2025-03-25 17:41:14,996 - __main__ - INFO - Processing user input for thread d7721309-c4f1-41bf-89c9-f8d7fdae987b: create agent that can writeessay
+2025-03-25 17:41:14,997 - __main__ - INFO - Starting new conversation with thread_id: d7721309-c4f1-41bf-89c9-f8d7fdae987b
+2025-03-25 17:41:16,575 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/site_pages?select=url&metadata-%3E%3Esource=eq.pydantic_ai_docs "HTTP/2 200 OK"
+2025-03-25 17:41:32,666 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:41:53,993 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:42:29,337 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:42:30,378 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:45:26,244 - __main__ - INFO - Processing user input for thread c41db4fd-4a6f-4fc5-ae1f-eb887a8737ca: create agent that can writeessay
+2025-03-25 17:45:26,245 - __main__ - INFO - Starting new conversation with thread_id: c41db4fd-4a6f-4fc5-ae1f-eb887a8737ca
+2025-03-25 17:45:31,545 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/site_pages?select=url&metadata-%3E%3Esource=eq.pydantic_ai_docs "HTTP/2 200 OK"
+2025-03-25 17:45:47,969 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:46:06,644 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:46:26,110 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:46:27,137 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:49:04,876 - __main__ - INFO - Processing user input for thread 064a9b7a-e073-4b46-a54a-1951ab5e1453: create agent that can writeessay
+2025-03-25 17:49:04,877 - __main__ - INFO - Starting new conversation with thread_id: 064a9b7a-e073-4b46-a54a-1951ab5e1453
+2025-03-25 17:49:05,829 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/site_pages?select=url&metadata-%3E%3Esource=eq.pydantic_ai_docs "HTTP/2 200 OK"
+2025-03-25 17:49:16,918 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:49:38,869 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:50:00,671 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 17:50:01,556 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
