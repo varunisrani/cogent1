@@ -1,0 +1,356 @@
+2025-04-03 17:01:05,427 - enhanced_tools_generator - INFO - Applying patch to mcp_tool_coder.generate_tools_py
+2025-04-03 17:01:05,427 - tool_validator_installer - ERROR - Error installing patches: cannot access submodule 'mcp_tools' of module 'archon' (most likely due to a circular import)
+2025-04-03 17:02:00,564 - mcp_tool_graph - INFO - Starting combined adaptive flow for request: create a agent that can do youtube transcript...
+2025-04-03 17:02:00,600 - mcp_tool_graph - INFO - Performing deep requirement analysis for query
+2025-04-03 17:02:00,602 - mcp_selector - INFO - Extracting CrewAI tool requirements from query
+2025-04-03 17:02:01,700 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 17:02:01,713 - mcp_selector - ERROR - Error extracting CrewAI requirements: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 17:02:01,713 - mcp_tool_graph - INFO - Successfully extracted requirements with 1 tools
+2025-04-03 17:02:01,713 - mcp_tool_graph - INFO - Primary tool name: generic
+2025-04-03 17:02:01,713 - mcp_tool_graph - INFO - Identified main tool type: generic
+2025-04-03 17:02:01,713 - mcp_tools - INFO - MCP TOOL SEARCH: Looking for tools matching query: create a agent that can do youtube transcript...
+2025-04-03 17:02:01,713 - mcp_tools - INFO - MCP DETECTION: Extracting tool needs from query using OpenAI
+2025-04-03 17:02:02,089 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 17:02:02,090 - mcp_tools - ERROR - MCP DETECTION ERROR: Failed to extract tools from query: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 17:02:02,090 - mcp_tools - INFO - MCP TOOL SEARCH: No specific tools identified by OpenAI, using fallback methods
+2025-04-03 17:02:02,090 - mcp_tools - INFO - MCP TOOL KEYWORD FOUND: 'youtube' via keyword 'youtube'
+2025-04-03 17:02:02,090 - mcp_tools - INFO - MCP TOOL FALLBACK: Found tools via keyword matching: youtube
+2025-04-03 17:02:03,283 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-03 17:02:03,293 - mcp_tools - INFO - MCP TOOL SEARCH: Query embedding generated successfully
+2025-04-03 17:02:03,611 - httpx - INFO - HTTP Request: POST https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/rpc/match_mcp_tools "HTTP/2 200 OK"
+2025-04-03 17:02:03,629 - mcp_tools - INFO - MCP TOOL SEARCH: No matching tools with high threshold, trying lower threshold
+2025-04-03 17:02:03,927 - httpx - INFO - HTTP Request: POST https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/rpc/match_mcp_tools "HTTP/2 200 OK"
+2025-04-03 17:02:03,933 - mcp_tools - INFO - MCP TOOL MATCH: Tool with purpose 'The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.' matches required service 'youtube'
+2025-04-03 17:02:03,933 - mcp_tools - INFO - MCP TOOL FILTER: Found 1 tools matching services: youtube
+2025-04-03 17:02:03,933 - mcp_tools - INFO - MCP TOOL SEARCH COMPLETE: Found 1 matching tools
+2025-04-03 17:02:03,933 - mcp_tools - INFO - MCP TOOL RESULT #1: 'The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.' (similarity: 0.433807943236355)
+2025-04-03 17:02:03,934 - mcp_tool_graph - INFO - Successfully extracted structured requirements with 1 tools
+2025-04-03 17:02:03,934 - mcp_tool_graph - INFO - Main tool type identified: generic
+2025-04-03 17:02:03,935 - mcp_tool_graph - INFO - Using output directory for all generated files: /Users/varunisrani/cogent1/output
+2025-04-03 17:02:03,935 - mcp_tool_graph - INFO - Created project directory: /Users/varunisrani/cogent1/output/generic_tool_20250403_170203
+2025-04-03 17:02:03,936 - mcp_tools - INFO - Generating tools.py file
+2025-04-03 17:02:03,936 - mcp_tools - INFO - MCP TOOL INTEGRATION: Processing 1 tools into a single file
+2025-04-03 17:02:03,936 - mcp_tools - INFO - MCP TOOL CONVERSION: Converting tool 1/1: The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:02:03,936 - mcp_tools - INFO - MCP TOOL CONVERT: Converting tool for purpose: The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:02:03,936 - mcp_tools - INFO - MCP TOOL CONVERT: Sending conversion request to LLM
+2025-04-03 17:02:04,497 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 17:02:04,498 - mcp_tools - ERROR - MCP TOOL CONVERT FAILED: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Traceback (most recent call last):
+  File "/Users/varunisrani/cogent1/archon/mcp_tools/mcp_tool_coder.py", line 1512, in convert_to_crewai_tool
+    response = await ctx.deps.openai_client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 1727, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1849, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1543, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1644, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 17:02:04,507 - mcp_tools - INFO - MCP TOOL CONVERSION SUCCESS: Added tool to tools.py: The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:02:04,507 - mcp_tools - INFO - Validating tools.py content for common errors
+2025-04-03 17:02:04,508 - mcp_tools - INFO - Detected error: Tool class names are inconsistent across files
+2025-04-03 17:02:04,508 - mcp_tools - INFO - Applied fix: Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:02:04,508 - mcp_tools - INFO - Detected error: Missing alias class for backward compatibility
+2025-04-03 17:02:04,509 - mcp_tools - INFO - Applied fix: Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:02:04,509 - mcp_tools - INFO - MCP TOOL INTEGRATION: Applied 2 fixes to tools.py for common errors
+2025-04-03 17:02:04,509 - mcp_tools - INFO -   - Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:02:04,509 - mcp_tools - INFO -   - Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:02:04,509 - mcp_tools - INFO - MCP TOOL INTEGRATION COMPLETE: Generated tools.py with 1 tools
+2025-04-03 17:02:04,509 - mcp_tools - INFO - Validating tools.py content for common errors
+2025-04-03 17:02:04,509 - mcp_tools - INFO - Detected error: Tool class names are inconsistent across files
+2025-04-03 17:02:04,509 - mcp_tools - INFO - Applied fix: Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:02:04,509 - mcp_tools - INFO - Detected error: Missing alias class for backward compatibility
+2025-04-03 17:02:04,509 - mcp_tools - INFO - Applied fix: Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:02:04,509 - mcp_tools - INFO - MCP TOOL INTEGRATION: Applied 2 fixes to tools.py for common errors
+2025-04-03 17:02:04,509 - mcp_tools - INFO -   - Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:02:04,509 - mcp_tools - INFO -   - Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:02:04,510 - mcp_tools - INFO - Generated and saved tools.py to /Users/varunisrani/cogent1/output/generic_tool_20250403_170203/tools.py
+2025-04-03 17:02:04,510 - mcp_tools - INFO - Generated error_list.md documenting common errors and fixes at /Users/varunisrani/cogent1/output/generic_tool_20250403_170203/error_list.md
+2025-04-03 17:02:04,510 - mcp_tools - INFO - Extracting tool class names from tools.py content
+2025-04-03 17:02:04,511 - mcp_tools - INFO - Found 2 classes with 'Tool' in name: ErrorMCPMCPTool, ErrorMCPMCPTool
+2025-04-03 17:02:04,511 - mcp_tools - INFO - Found 2 classes inheriting from Agent or Tool: ErrorMCPMCPTool, ErrorMCPMCPTool
+2025-04-03 17:02:04,512 - mcp_tools - INFO - Final extracted tool class names: ErrorMCPMCPTool
+2025-04-03 17:02:04,512 - mcp_tool_graph - INFO - Extracted tool class names: ['ErrorMCPMCPTool']
+2025-04-03 17:02:04,512 - mcp_tool_graph - INFO - Generated requirements.txt at /Users/varunisrani/cogent1/output/generic_tool_20250403_170203/requirements.txt
+2025-04-03 17:02:04,512 - mcp_tool_graph - INFO - Using model gpt-4o-mini for template generation
+2025-04-03 17:02:04,512 - mcp_templates - INFO - Searching for MCP templates matching query: 'create a agent that can do youtube transcript...'
+2025-04-03 17:02:04,512 - mcp_templates - INFO - Detected tool type 'youtube' from keyword 'youtube' in query
+2025-04-03 17:02:04,512 - mcp_templates - INFO - Detected tool types: youtube
+2025-04-03 17:02:04,512 - mcp_templates - INFO - Detected tool names: errormcpmcptool, error
+2025-04-03 17:02:04,513 - mcp_templates - INFO - Combined search text: 'create a agent that can do youtube transcript create a agent that can do youtube transcript MCP Tool...'
+2025-04-03 17:02:04,513 - mcp_templates - INFO - Key matching terms: youtube transcript, errormcpmcptool, youtube, youtube transcript..., do youtube, error
+2025-04-03 17:02:04,747 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25errormcpmcptool%25 "HTTP/2 200 OK"
+2025-04-03 17:02:04,990 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25error%25 "HTTP/2 200 OK"
+2025-04-03 17:02:05,013 - mcp_templates - INFO - Found 1 purpose matches for 'error'
+2025-04-03 17:02:05,013 - mcp_templates - INFO - Boosted score for youtube_agent - exact tool name/type match
+2025-04-03 17:02:05,349 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25youtube%25 "HTTP/2 200 OK"
+2025-04-03 17:02:05,351 - mcp_templates - INFO - Found 1 purpose matches for 'youtube'
+2025-04-03 17:02:05,351 - mcp_templates - INFO - Boosted score for youtube_agent - exact tool name/type match
+2025-04-03 17:02:05,561 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25youtube%25 "HTTP/2 200 OK"
+2025-04-03 17:02:05,570 - mcp_templates - INFO - Found 1 folder matches for 'youtube'
+2025-04-03 17:02:05,736 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25errormcpmcptool%25 "HTTP/2 200 OK"
+2025-04-03 17:02:05,862 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25error%25 "HTTP/2 200 OK"
+2025-04-03 17:02:05,863 - mcp_templates - INFO - Using 1 direct matches from tool name/type
+2025-04-03 17:02:05,863 - mcp_templates - INFO - Using template: youtube_agent (similarity: 0.920)
+2025-04-03 17:02:05,863 - mcp_templates - INFO - Template purpose: The YouTube Agent is designed to extract and process transcripts from YouTube videos using the Model...
+2025-04-03 17:02:05,863 - mcp_templates - INFO - Adapting agents code...
+2025-04-03 17:02:05,863 - mcp_templates - INFO - Calling OpenAI API to adapt agents code with enhanced transformation
+2025-04-03 17:02:21,403 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:02:21,426 - mcp_templates - INFO - Initial change percentage for agents.py: 90.80%
+2025-04-03 17:02:21,426 - mcp_templates - INFO - Successfully adapted agents code, 3732 characters
+2025-04-03 17:02:21,427 - mcp_templates - INFO - Saved adapted agents.py to /Users/varunisrani/cogent1/output/generic_tool_20250403_170203/agents.py
+2025-04-03 17:02:22,978 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:03:03,193 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:03:03,561 - mcp_templates - INFO - Change percentage for tasks.py: 41.30%
+2025-04-03 17:03:03,561 - mcp_templates - INFO - Performing cross-file consistency validation...
+2025-04-03 17:03:03,566 - mcp_templates - INFO - Saved adapted tasks.py to /Users/varunisrani/cogent1/output/generic_tool_20250403_170203/tasks.py
+2025-04-03 17:03:05,068 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:03:18,577 - enhanced_tools_generator - INFO - Applying patch to mcp_tool_coder.generate_tools_py
+2025-04-03 17:03:18,577 - tool_validator_installer - ERROR - Error installing patches: cannot access submodule 'mcp_tools' of module 'archon' (most likely due to a circular import)
+2025-04-03 17:03:24,244 - mcp_tool_graph - INFO - Starting combined adaptive flow for request: create a agent that can do youtube transcript...
+2025-04-03 17:03:24,247 - mcp_tool_graph - INFO - Performing deep requirement analysis for query
+2025-04-03 17:03:24,248 - mcp_selector - INFO - Extracting CrewAI tool requirements from query
+2025-04-03 17:03:27,575 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:03:27,601 - mcp_selector - INFO - Extracted CrewAI requirements for 1 tools
+2025-04-03 17:03:27,602 - mcp_tool_graph - INFO - Successfully extracted requirements with 1 tools
+2025-04-03 17:03:27,602 - mcp_tool_graph - INFO - Primary tool name: youtube transcript generator
+2025-04-03 17:03:27,602 - mcp_tool_graph - INFO - Identified main tool type: youtube
+2025-04-03 17:03:27,602 - mcp_tools - INFO - MCP TOOL SEARCH: Looking for tools matching query: create a agent that can do youtube transcript...
+2025-04-03 17:03:27,602 - mcp_tools - INFO - MCP DETECTION: Extracting tool needs from query using OpenAI
+2025-04-03 17:03:28,236 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:03:28,238 - mcp_tools - INFO - MCP DETECTION SUCCESS: OpenAI identified tools: youtube
+2025-04-03 17:03:28,238 - mcp_tools - INFO - MCP TOOL SEARCH: Found specific tools in query: youtube
+2025-04-03 17:03:29,649 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-03 17:03:29,655 - mcp_tools - INFO - MCP TOOL SEARCH: Query embedding generated successfully
+2025-04-03 17:03:30,442 - httpx - INFO - HTTP Request: POST https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/rpc/match_mcp_tools "HTTP/2 200 OK"
+2025-04-03 17:03:30,457 - mcp_tools - INFO - MCP TOOL SEARCH: No matching tools with high threshold, trying lower threshold
+2025-04-03 17:03:30,788 - httpx - INFO - HTTP Request: POST https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/rpc/match_mcp_tools "HTTP/2 200 OK"
+2025-04-03 17:03:30,790 - mcp_tools - INFO - MCP TOOL MATCH: Tool with purpose 'The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.' matches required service 'youtube'
+2025-04-03 17:03:30,790 - mcp_tools - INFO - MCP TOOL FILTER: Found 1 tools matching services: youtube
+2025-04-03 17:03:30,791 - mcp_tools - INFO - MCP TOOL SEARCH COMPLETE: Found 1 matching tools
+2025-04-03 17:03:30,791 - mcp_tools - INFO - MCP TOOL RESULT #1: 'The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.' (similarity: 0.433807943236355)
+2025-04-03 17:03:30,791 - mcp_tool_graph - INFO - Successfully extracted structured requirements with 1 tools
+2025-04-03 17:03:30,791 - mcp_tool_graph - INFO - Main tool type identified: youtube
+2025-04-03 17:03:30,791 - mcp_tool_graph - INFO - Using output directory for all generated files: /Users/varunisrani/cogent1/output
+2025-04-03 17:03:30,791 - mcp_tool_graph - INFO - Created project directory: /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330
+2025-04-03 17:03:30,792 - mcp_tools - INFO - Generating tools.py file
+2025-04-03 17:03:30,792 - mcp_tools - INFO - MCP TOOL INTEGRATION: Processing 1 tools into a single file
+2025-04-03 17:03:30,792 - mcp_tools - INFO - MCP TOOL CONVERSION: Converting tool 1/1: The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:03:30,792 - mcp_tools - INFO - MCP TOOL CONVERT: Converting tool for purpose: The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:03:30,793 - mcp_tools - INFO - MCP TOOL CONVERT: Sending conversion request to LLM
+2025-04-03 17:04:31,186 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:04:31,476 - mcp_tools - INFO - MCP TOOL CONVERT SUCCESS: Generated CrewAI-compatible tool for The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:04:31,477 - mcp_tools - INFO - MCP TOOL CONVERSION SUCCESS: Added tool to tools.py: The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:04:31,477 - mcp_tools - INFO - Validating tools.py content for common errors
+2025-04-03 17:04:31,477 - mcp_tools - INFO - Detected error: Tool class names are inconsistent across files
+2025-04-03 17:04:31,478 - mcp_tools - INFO - Applied fix: Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:04:31,478 - mcp_tools - INFO - Detected error: Missing alias class for backward compatibility
+2025-04-03 17:04:31,478 - mcp_tools - INFO - Applied fix: Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:04:31,479 - mcp_tools - INFO - MCP TOOL INTEGRATION: Applied 2 fixes to tools.py for common errors
+2025-04-03 17:04:31,479 - mcp_tools - INFO -   - Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:04:31,479 - mcp_tools - INFO -   - Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:04:31,479 - mcp_tools - INFO - MCP TOOL INTEGRATION COMPLETE: Generated tools.py with 1 tools
+2025-04-03 17:04:31,479 - mcp_tools - INFO - Validating tools.py content for common errors
+2025-04-03 17:04:31,479 - mcp_tools - INFO - Detected error: Tool class names are inconsistent across files
+2025-04-03 17:04:31,479 - mcp_tools - INFO - Applied fix: Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:04:31,479 - mcp_tools - INFO - Detected error: Missing alias class for backward compatibility
+2025-04-03 17:04:31,479 - mcp_tools - INFO - Applied fix: Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:04:31,479 - mcp_tools - INFO - MCP TOOL INTEGRATION: Applied 2 fixes to tools.py for common errors
+2025-04-03 17:04:31,479 - mcp_tools - INFO -   - Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:04:31,480 - mcp_tools - INFO -   - Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:04:31,481 - mcp_tools - INFO - Generated and saved tools.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/tools.py
+2025-04-03 17:04:31,481 - mcp_tools - INFO - Generated error_list.md documenting common errors and fixes at /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/error_list.md
+2025-04-03 17:04:31,481 - mcp_tools - INFO - Extracting tool class names from tools.py content
+2025-04-03 17:04:31,482 - mcp_tools - INFO - Found 2 classes with 'Tool' in name: YouTubeTranscriptMCPMCPTool, YouTubeTranscriptMCPMCPTool
+2025-04-03 17:04:31,482 - mcp_tools - INFO - Found 2 classes inheriting from Agent or Tool: YouTubeTranscriptMCPMCPTool, YouTubeTranscriptMCPMCPTool
+2025-04-03 17:04:31,487 - mcp_tools - INFO - Final extracted tool class names: YouTubeTranscriptMCPMCPTool
+2025-04-03 17:04:31,487 - mcp_tool_graph - INFO - Extracted tool class names: ['YouTubeTranscriptMCPMCPTool']
+2025-04-03 17:04:31,488 - mcp_tool_graph - INFO - Generated requirements.txt at /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/requirements.txt
+2025-04-03 17:04:31,488 - mcp_tool_graph - INFO - Using model gpt-4o-mini for template generation
+2025-04-03 17:04:31,488 - mcp_templates - INFO - Searching for MCP templates matching query: 'create a agent that can do youtube transcript...'
+2025-04-03 17:04:31,488 - mcp_templates - INFO - Detected tool type 'youtube' from keyword 'youtube' in query
+2025-04-03 17:04:31,488 - mcp_templates - INFO - Detected tool types: youtube
+2025-04-03 17:04:31,488 - mcp_templates - INFO - Detected tool names: youtubetranscriptmcpmcptool, youtubetranscript
+2025-04-03 17:04:31,488 - mcp_templates - INFO - Combined search text: 'create a agent that can do youtube transcript create a agent that can do youtube transcript MCP Tool...'
+2025-04-03 17:04:31,488 - mcp_templates - INFO - Key matching terms: youtube, youtube transcript..., do youtube, youtube transcript, youtubetranscript, youtubetranscriptmcpmcptool
+2025-04-03 17:04:31,733 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25youtubetranscriptmcpmcptool%25 "HTTP/2 200 OK"
+2025-04-03 17:04:31,878 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25youtubetranscript%25 "HTTP/2 200 OK"
+2025-04-03 17:04:32,081 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25youtube%25 "HTTP/2 200 OK"
+2025-04-03 17:04:32,089 - mcp_templates - INFO - Found 1 purpose matches for 'youtube'
+2025-04-03 17:04:32,089 - mcp_templates - INFO - Boosted score for youtube_agent - exact tool name/type match
+2025-04-03 17:04:32,313 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25youtube%25 "HTTP/2 200 OK"
+2025-04-03 17:04:32,315 - mcp_templates - INFO - Found 1 folder matches for 'youtube'
+2025-04-03 17:04:32,484 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25youtubetranscriptmcpmcptool%25 "HTTP/2 200 OK"
+2025-04-03 17:04:32,645 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25youtubetranscript%25 "HTTP/2 200 OK"
+2025-04-03 17:04:32,646 - mcp_templates - INFO - Using 1 direct matches from tool name/type
+2025-04-03 17:04:32,646 - mcp_templates - INFO - Using template: youtube_agent (similarity: 0.920)
+2025-04-03 17:04:32,646 - mcp_templates - INFO - Template purpose: The YouTube Agent is designed to extract and process transcripts from YouTube videos using the Model...
+2025-04-03 17:04:32,646 - mcp_templates - INFO - Adapting agents code...
+2025-04-03 17:04:32,646 - mcp_templates - INFO - Calling OpenAI API to adapt agents code with enhanced transformation
+2025-04-03 17:04:43,920 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:04:43,943 - mcp_templates - INFO - Initial change percentage for agents.py: 74.49%
+2025-04-03 17:04:43,943 - mcp_templates - INFO - Successfully adapted agents code, 4147 characters
+2025-04-03 17:04:43,944 - mcp_templates - INFO - Saved adapted agents.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/agents.py
+2025-04-03 17:04:45,707 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:05:27,835 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:05:28,175 - mcp_templates - INFO - Change percentage for tasks.py: 59.79%
+2025-04-03 17:05:28,175 - mcp_templates - INFO - Performing cross-file consistency validation...
+2025-04-03 17:05:28,176 - mcp_templates - INFO - Saved adapted tasks.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/tasks.py
+2025-04-03 17:05:29,460 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:05:50,736 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:05:50,759 - mcp_templates - INFO - Change percentage for crew.py: 42.18%
+2025-04-03 17:05:50,759 - mcp_templates - INFO - Performing cross-file consistency validation...
+2025-04-03 17:05:50,759 - mcp_templates - INFO - Saved adapted crew.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/crew.py
+2025-04-03 17:05:50,760 - mcp_templates - INFO - Adapting main.py code...
+2025-04-03 17:05:52,367 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:06:58,011 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:06:58,329 - mcp_templates - INFO - Change percentage for main.py: 33.41%
+2025-04-03 17:06:58,329 - mcp_templates - INFO - Performing cross-file consistency validation...
+2025-04-03 17:06:58,329 - mcp_templates - WARNING - main_code is not a string, it's a <class 'dict'>. Attempting to convert.
+2025-04-03 17:06:58,329 - mcp_templates - INFO - Made main.py executable
+2025-04-03 17:06:58,329 - mcp_templates - INFO - Saved default main.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/main.py
+2025-04-03 17:06:58,329 - mcp_templates - INFO - Generating default run_agent.py file...
+2025-04-03 17:07:05,590 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:07:05,593 - mcp_templates - INFO - Successfully generated run_agent.py with simplified agent execution interface
+2025-04-03 17:07:05,594 - mcp_templates - INFO - Made run_agent.py executable
+2025-04-03 17:07:05,595 - mcp_templates - INFO - Saved default run_agent.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/run_agent.py
+2025-04-03 17:07:05,595 - mcp_templates - INFO - Created and made executable: /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/make_executable.sh
+2025-04-03 17:07:05,595 - mcp_templates - INFO - Created README.md with usage instructions
+2025-04-03 17:07:05,595 - mcp_templates - INFO - Performing final cross-file validation and consistency check...
+2025-04-03 17:07:05,596 - mcp_templates - INFO - Found agent classes: []
+2025-04-03 17:07:05,596 - mcp_templates - INFO - Found agent factory methods: ['transcript_extractor', 'transcript_insight_generator', 'language_specific_transcript_extractor', 'specialized_transcript_agent_team']
+2025-04-03 17:07:05,611 - mcp_templates - INFO - No cross-file consistency issues detected
+2025-04-03 17:07:05,612 - mcp_tool_graph - INFO - Template generation successful! Created CrewAI project files.
+2025-04-03 17:07:20,097 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:07:20,104 - mcp_tool_graph - INFO - Generated README.md at /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330/README.md
+2025-04-03 17:07:20,104 - mcp_tool_graph - INFO - Successfully generated complete CrewAI project in /Users/varunisrani/cogent1/output/youtube_tool_20250403_170330
+2025-04-03 17:20:20,647 - enhanced_tools_generator - INFO - Applying patch to mcp_tool_coder.generate_tools_py
+2025-04-03 17:20:20,647 - tool_validator_installer - ERROR - Error installing patches: cannot access submodule 'mcp_tools' of module 'archon' (most likely due to a circular import)
+2025-04-03 17:30:29,673 - enhanced_tools_generator - INFO - Applying patch to mcp_tool_coder.generate_tools_py
+2025-04-03 17:30:29,673 - tool_validator_installer - ERROR - Error installing patches: cannot access submodule 'mcp_tools' of module 'archon' (most likely due to a circular import)
+2025-04-03 17:46:24,406 - enhanced_tools_generator - INFO - Applying patch to mcp_tool_coder.generate_tools_py
+2025-04-03 17:46:24,406 - tool_validator_installer - ERROR - Error installing patches: cannot access submodule 'mcp_tools' of module 'archon' (most likely due to a circular import)
+2025-04-03 17:55:13,717 - enhanced_tools_generator - INFO - Applying patch to mcp_tool_coder.generate_tools_py
+2025-04-03 17:55:13,717 - tool_validator_installer - ERROR - Error installing patches: cannot access submodule 'mcp_tools' of module 'archon' (most likely due to a circular import)
+2025-04-03 17:55:39,162 - mcp_tool_graph - INFO - Starting combined adaptive flow for request: create agent that can do youtube transcription...
+2025-04-03 17:55:39,162 - mcp_tool_graph - INFO - Performing deep requirement analysis for query
+2025-04-03 17:55:39,163 - mcp_selector - INFO - Extracting CrewAI tool requirements from query
+2025-04-03 17:55:43,161 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:55:43,176 - mcp_selector - INFO - Extracted CrewAI requirements for 1 tools
+2025-04-03 17:55:43,176 - mcp_tool_graph - INFO - Successfully extracted requirements with 1 tools
+2025-04-03 17:55:43,176 - mcp_tool_graph - INFO - Primary tool name: youtube transcription agent
+2025-04-03 17:55:43,176 - mcp_tool_graph - INFO - Identified main tool type: youtube
+2025-04-03 17:55:43,176 - mcp_tools - INFO - MCP TOOL SEARCH: Looking for tools matching query: create agent that can do youtube transcription...
+2025-04-03 17:55:43,176 - mcp_tools - INFO - MCP DETECTION: Extracting tool needs from query using OpenAI
+2025-04-03 17:55:43,762 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:55:43,773 - mcp_tools - INFO - MCP DETECTION SUCCESS: OpenAI identified tools: youtube, google_drive
+2025-04-03 17:55:43,773 - mcp_tools - INFO - MCP TOOL SEARCH: Found specific tools in query: youtube, google_drive
+2025-04-03 17:55:46,418 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-03 17:55:46,423 - mcp_tools - INFO - MCP TOOL SEARCH: Query embedding generated successfully
+2025-04-03 17:55:47,046 - httpx - INFO - HTTP Request: POST https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/rpc/match_mcp_tools "HTTP/2 200 OK"
+2025-04-03 17:55:47,060 - mcp_tools - INFO - MCP TOOL SEARCH: No matching tools with high threshold, trying lower threshold
+2025-04-03 17:55:47,410 - httpx - INFO - HTTP Request: POST https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/rpc/match_mcp_tools "HTTP/2 200 OK"
+2025-04-03 17:55:47,423 - mcp_tools - INFO - MCP TOOL MATCH: Tool with purpose 'The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.' matches required service 'youtube'
+2025-04-03 17:55:47,424 - mcp_tools - INFO - MCP TOOL FILTER: Found 1 tools matching services: youtube, google_drive
+2025-04-03 17:55:47,424 - mcp_tools - INFO - MCP TOOL SEARCH COMPLETE: Found 1 matching tools
+2025-04-03 17:55:47,424 - mcp_tools - INFO - MCP TOOL RESULT #1: 'The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.' (similarity: 0.432919472455982)
+2025-04-03 17:55:47,424 - mcp_tool_graph - INFO - Successfully extracted structured requirements with 1 tools
+2025-04-03 17:55:47,424 - mcp_tool_graph - INFO - Main tool type identified: youtube
+2025-04-03 17:55:47,424 - mcp_tool_graph - INFO - Using output directory for all generated files: /Users/varunisrani/cogent1/output
+2025-04-03 17:55:47,425 - mcp_tool_graph - INFO - Created project directory: /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547
+2025-04-03 17:55:47,425 - mcp_tools - INFO - Generating tools.py file
+2025-04-03 17:55:47,425 - mcp_tools - INFO - MCP TOOL INTEGRATION: Processing 1 tools into a single file
+2025-04-03 17:55:47,425 - mcp_tools - INFO - MCP TOOL CONVERSION: Converting tool 1/1: The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:55:47,426 - mcp_tools - INFO - MCP TOOL CONVERT: Converting tool for purpose: The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:55:47,426 - mcp_tools - INFO - MCP TOOL CONVERT: Sending conversion request to LLM
+2025-04-03 17:56:42,809 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:56:43,359 - mcp_tools - INFO - MCP TOOL CONVERT SUCCESS: Generated CrewAI-compatible tool for The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:56:43,359 - mcp_tools - INFO - MCP TOOL CONVERSION SUCCESS: Added tool to tools.py: The "tools" MCP tool is designed for managing and processing YouTube transcript operations. It includes functionality to configure enhanced logging for tracking operations, and it leverages the `pydantic` library to define structured input parameters for various transcript-related tasks. This tool facilitates operations such as retrieving, analyzing, or manipulating YouTube video transcripts, enabling developers to integrate transcript handling seamlessly into their applications.
+2025-04-03 17:56:43,360 - mcp_tools - INFO - Validating tools.py content for common errors
+2025-04-03 17:56:43,360 - mcp_tools - INFO - Detected error: Tool class names are inconsistent across files
+2025-04-03 17:56:43,362 - mcp_tools - INFO - Applied fix: Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:56:43,362 - mcp_tools - INFO - Detected error: Missing alias class for backward compatibility
+2025-04-03 17:56:43,363 - mcp_tools - INFO - Applied fix: Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:56:43,363 - mcp_tools - INFO - MCP TOOL INTEGRATION: Applied 2 fixes to tools.py for common errors
+2025-04-03 17:56:43,363 - mcp_tools - INFO -   - Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:56:43,363 - mcp_tools - INFO -   - Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:56:43,363 - mcp_tools - INFO - MCP TOOL INTEGRATION COMPLETE: Generated tools.py with 1 tools
+2025-04-03 17:56:43,363 - mcp_tools - INFO - Validating tools.py content for common errors
+2025-04-03 17:56:43,363 - mcp_tools - INFO - Detected error: Tool class names are inconsistent across files
+2025-04-03 17:56:43,363 - mcp_tools - INFO - Applied fix: Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:56:43,363 - mcp_tools - INFO - Detected error: Missing alias class for backward compatibility
+2025-04-03 17:56:43,364 - mcp_tools - INFO - Applied fix: Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:56:43,364 - mcp_tools - INFO - MCP TOOL INTEGRATION: Applied 2 fixes to tools.py for common errors
+2025-04-03 17:56:43,364 - mcp_tools - INFO -   - Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 17:56:43,364 - mcp_tools - INFO -   - Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 17:56:43,366 - mcp_tools - INFO - Generated and saved tools.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/tools.py
+2025-04-03 17:56:43,366 - mcp_tools - INFO - Generated error_list.md documenting common errors and fixes at /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/error_list.md
+2025-04-03 17:56:43,366 - mcp_tools - INFO - Extracting tool class names from tools.py content
+2025-04-03 17:56:43,367 - mcp_tools - INFO - Found 2 classes with 'Tool' in name: YouTubeTranscriptMCPMCPTool, YouTubeTranscriptMCPMCPTool
+2025-04-03 17:56:43,367 - mcp_tools - INFO - Found 2 classes inheriting from Agent or Tool: YouTubeTranscriptMCPMCPTool, YouTubeTranscriptMCPMCPTool
+2025-04-03 17:56:43,372 - mcp_tools - INFO - Final extracted tool class names: YouTubeTranscriptMCPMCPTool
+2025-04-03 17:56:43,372 - mcp_tool_graph - INFO - Extracted tool class names: ['YouTubeTranscriptMCPMCPTool']
+2025-04-03 17:56:43,373 - mcp_tool_graph - INFO - Generated requirements.txt at /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/requirements.txt
+2025-04-03 17:56:43,373 - mcp_tool_graph - INFO - Using model gpt-4o-mini for template generation
+2025-04-03 17:56:43,373 - mcp_templates - INFO - Searching for MCP templates matching query: 'create agent that can do youtube transcription...'
+2025-04-03 17:56:43,373 - mcp_templates - INFO - Detected tool type 'youtube' from keyword 'youtube' in query
+2025-04-03 17:56:43,373 - mcp_templates - INFO - Detected tool types: youtube
+2025-04-03 17:56:43,373 - mcp_templates - INFO - Detected tool names: youtubetranscriptmcpmcptool, youtubetranscript
+2025-04-03 17:56:43,374 - mcp_templates - INFO - Combined search text: 'create agent that can do youtube transcription create agent that can do youtube transcription MCP To...'
+2025-04-03 17:56:43,374 - mcp_templates - INFO - Key matching terms: youtube transcription..., youtubetranscriptmcpmcptool, do youtube, youtubetranscript, youtube transcription, youtube
+2025-04-03 17:56:43,587 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25youtubetranscriptmcpmcptool%25 "HTTP/2 200 OK"
+2025-04-03 17:56:43,762 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25youtubetranscript%25 "HTTP/2 200 OK"
+2025-04-03 17:56:44,575 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25youtube%25 "HTTP/2 200 OK"
+2025-04-03 17:56:44,597 - mcp_templates - INFO - Found 1 purpose matches for 'youtube'
+2025-04-03 17:56:44,597 - mcp_templates - INFO - Boosted score for youtube_agent - exact tool name/type match
+2025-04-03 17:56:45,016 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25youtube%25 "HTTP/2 200 OK"
+2025-04-03 17:56:45,018 - mcp_templates - INFO - Found 1 folder matches for 'youtube'
+2025-04-03 17:56:45,262 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25youtubetranscriptmcpmcptool%25 "HTTP/2 200 OK"
+2025-04-03 17:56:45,434 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25youtubetranscript%25 "HTTP/2 200 OK"
+2025-04-03 17:56:45,435 - mcp_templates - INFO - Using 1 direct matches from tool name/type
+2025-04-03 17:56:45,435 - mcp_templates - INFO - Using template: youtube_agent (similarity: 0.920)
+2025-04-03 17:56:45,435 - mcp_templates - INFO - Template purpose: The YouTube Agent is designed to extract and process transcripts from YouTube videos using the Model...
+2025-04-03 17:56:45,435 - mcp_templates - INFO - Adapting agents code...
+2025-04-03 17:56:45,435 - mcp_templates - INFO - Calling OpenAI API to adapt agents code with enhanced transformation
+2025-04-03 17:57:03,134 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:57:03,167 - mcp_templates - INFO - Initial change percentage for agents.py: 70.29%
+2025-04-03 17:57:03,167 - mcp_templates - INFO - Successfully adapted agents code, 5237 characters
+2025-04-03 17:57:03,168 - mcp_templates - INFO - Saved adapted agents.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/agents.py
+2025-04-03 17:57:04,925 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:57:32,830 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:57:32,914 - mcp_templates - INFO - Change percentage for tasks.py: 59.33%
+2025-04-03 17:57:32,915 - mcp_templates - INFO - Performing cross-file consistency validation...
+2025-04-03 17:57:32,916 - mcp_templates - INFO - Saved adapted tasks.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/tasks.py
+2025-04-03 17:57:34,466 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:57:51,159 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:57:51,199 - mcp_templates - INFO - Change percentage for crew.py: 52.59%
+2025-04-03 17:57:51,199 - mcp_templates - INFO - Performing cross-file consistency validation...
+2025-04-03 17:57:51,200 - mcp_templates - INFO - Saved adapted crew.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/crew.py
+2025-04-03 17:57:51,200 - mcp_templates - INFO - Adapting main.py code...
+2025-04-03 17:57:53,047 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:58:53,217 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:58:53,507 - mcp_templates - INFO - Change percentage for main.py: 35.64%
+2025-04-03 17:58:53,507 - mcp_templates - INFO - Performing cross-file consistency validation...
+2025-04-03 17:58:53,507 - mcp_templates - WARNING - main_code is not a string, it's a <class 'dict'>. Attempting to convert.
+2025-04-03 17:58:53,508 - mcp_templates - INFO - Made main.py executable
+2025-04-03 17:58:53,508 - mcp_templates - INFO - Saved default main.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/main.py
+2025-04-03 17:58:53,508 - mcp_templates - INFO - Generating run_agent.py file...
+2025-04-03 17:59:00,039 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:59:00,042 - mcp_templates - INFO - Successfully generated run_agent.py with simplified agent execution interface
+2025-04-03 17:59:00,044 - mcp_templates - INFO - Made run_agent.py executable
+2025-04-03 17:59:00,044 - mcp_templates - INFO - Saved run_agent.py to /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/run_agent.py
+2025-04-03 17:59:00,044 - mcp_templates - INFO - Created and made executable: /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/make_executable.sh
+2025-04-03 17:59:00,045 - mcp_templates - INFO - Created README.md with usage instructions
+2025-04-03 17:59:00,046 - mcp_tool_graph - INFO - Template generation successful! Created CrewAI project files.
+2025-04-03 17:59:11,780 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 17:59:11,789 - mcp_tool_graph - INFO - Generated README.md at /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547/README.md
+2025-04-03 17:59:11,791 - mcp_tool_graph - INFO - Successfully generated complete CrewAI project in /Users/varunisrani/cogent1/output/youtube_tool_20250403_175547
+2025-04-03 18:00:08,363 - enhanced_tools_generator - INFO - Applying patch to mcp_tool_coder.generate_tools_py
+2025-04-03 18:00:08,363 - tool_validator_installer - ERROR - Error installing patches: cannot access submodule 'mcp_tools' of module 'archon' (most likely due to a circular import)
+2025-04-03 18:06:10,571 - enhanced_tools_generator - INFO - Applying patch to mcp_tool_coder.generate_tools_py
+2025-04-03 18:06:10,572 - tool_validator_installer - ERROR - Error installing patches: cannot access submodule 'mcp_tools' of module 'archon' (most likely due to a circular import)

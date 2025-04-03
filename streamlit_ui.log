@@ -19,3 +19,186 @@
 2025-03-25 17:49:38,869 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-03-25 17:50:00,671 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-03-25 17:50:01,556 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 16:58:05,987 - enhanced_tools_generator - INFO - Applying patch to mcp_tool_coder.generate_tools_py
+2025-04-03 16:58:05,987 - tool_validator_installer - ERROR - Error installing patches: cannot access submodule 'mcp_tools' of module 'archon' (most likely due to a circular import)
+2025-04-03 16:58:25,758 - mcp_tool_graph - INFO - Starting combined adaptive flow for request: create agent that can suggest me song...
+2025-04-03 16:58:25,758 - mcp_tool_graph - INFO - Performing deep requirement analysis for query
+2025-04-03 16:58:25,759 - mcp_selector - INFO - Extracting CrewAI tool requirements from query
+2025-04-03 16:58:26,568 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 16:58:26,571 - mcp_selector - ERROR - Error extracting CrewAI requirements: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 16:58:26,571 - mcp_tool_graph - INFO - Successfully extracted requirements with 1 tools
+2025-04-03 16:58:26,571 - mcp_tool_graph - INFO - Primary tool name: generic
+2025-04-03 16:58:26,571 - mcp_tool_graph - INFO - Identified main tool type: generic
+2025-04-03 16:58:26,571 - mcp_tools - INFO - MCP TOOL SEARCH: Looking for tools matching query: create agent that can suggest me song...
+2025-04-03 16:58:26,571 - mcp_tools - INFO - MCP DETECTION: Extracting tool needs from query using OpenAI
+2025-04-03 16:58:26,945 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 16:58:26,946 - mcp_tools - ERROR - MCP DETECTION ERROR: Failed to extract tools from query: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 16:58:26,947 - mcp_tools - INFO - MCP TOOL SEARCH: No specific tools identified by OpenAI, using fallback methods
+2025-04-03 16:58:26,947 - mcp_tools - INFO - MCP TOOL KEYWORD FOUND: 'spotify' via keyword 'song'
+2025-04-03 16:58:26,947 - mcp_tools - INFO - MCP TOOL FALLBACK: Found tools via keyword matching: spotify
+2025-04-03 16:58:30,670 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-04-03 16:58:30,677 - mcp_tools - INFO - MCP TOOL SEARCH: Query embedding generated successfully
+2025-04-03 16:58:31,769 - httpx - INFO - HTTP Request: POST https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/rpc/match_mcp_tools "HTTP/2 200 OK"
+2025-04-03 16:58:31,780 - mcp_tools - INFO - MCP TOOL SEARCH: No matching tools with high threshold, trying lower threshold
+2025-04-03 16:58:32,148 - httpx - INFO - HTTP Request: POST https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/rpc/match_mcp_tools "HTTP/2 200 OK"
+2025-04-03 16:58:32,149 - mcp_tools - INFO - MCP TOOL MATCH: Tool with purpose 'The `smithery_spotify_client` is an MCP tool designed to facilitate interaction with the Spotify API through a structured interface. It allows users to perform various operations such as searching for music, retrieving recommendations, and managing playlists. By utilizing the Model Context Protocol (MCP) system on Smithery, this tool provides a streamlined method for accessing Spotify's functionalities, making it easier for developers to integrate music-related features into their applications.' matches required service 'spotify'
+2025-04-03 16:58:32,149 - mcp_tools - INFO - MCP TOOL FILTER: Found 1 tools matching services: spotify
+2025-04-03 16:58:32,150 - mcp_tools - INFO - MCP TOOL SEARCH COMPLETE: Found 1 matching tools
+2025-04-03 16:58:32,150 - mcp_tools - INFO - MCP TOOL RESULT #1: 'The `smithery_spotify_client` is an MCP tool designed to facilitate interaction with the Spotify API through a structured interface. It allows users to perform various operations such as searching for music, retrieving recommendations, and managing playlists. By utilizing the Model Context Protocol (MCP) system on Smithery, this tool provides a streamlined method for accessing Spotify's functionalities, making it easier for developers to integrate music-related features into their applications.' (similarity: 0.359296449464772)
+2025-04-03 16:58:32,150 - mcp_tool_graph - INFO - Successfully extracted structured requirements with 1 tools
+2025-04-03 16:58:32,150 - mcp_tool_graph - INFO - Main tool type identified: generic
+2025-04-03 16:58:32,150 - mcp_tool_graph - INFO - Using output directory for all generated files: /Users/varunisrani/cogent1/output
+2025-04-03 16:58:32,150 - mcp_tool_graph - INFO - Created project directory: /Users/varunisrani/cogent1/output/generic_tool_20250403_165832
+2025-04-03 16:58:32,150 - mcp_tools - INFO - Generating tools.py file
+2025-04-03 16:58:32,150 - mcp_tools - INFO - MCP TOOL INTEGRATION: Processing 1 tools into a single file
+2025-04-03 16:58:32,150 - mcp_tools - INFO - MCP TOOL CONVERSION: Converting tool 1/1: The `smithery_spotify_client` is an MCP tool designed to facilitate interaction with the Spotify API through a structured interface. It allows users to perform various operations such as searching for music, retrieving recommendations, and managing playlists. By utilizing the Model Context Protocol (MCP) system on Smithery, this tool provides a streamlined method for accessing Spotify's functionalities, making it easier for developers to integrate music-related features into their applications.
+2025-04-03 16:58:32,151 - mcp_tools - INFO - MCP TOOL CONVERT: Converting tool for purpose: The `smithery_spotify_client` is an MCP tool designed to facilitate interaction with the Spotify API through a structured interface. It allows users to perform various operations such as searching for music, retrieving recommendations, and managing playlists. By utilizing the Model Context Protocol (MCP) system on Smithery, this tool provides a streamlined method for accessing Spotify's functionalities, making it easier for developers to integrate music-related features into their applications.
+2025-04-03 16:58:32,151 - mcp_tools - INFO - MCP TOOL CONVERT: Sending conversion request to LLM
+2025-04-03 16:58:32,658 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 16:58:32,659 - mcp_tools - ERROR - MCP TOOL CONVERT FAILED: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Traceback (most recent call last):
+  File "/Users/varunisrani/cogent1/archon/mcp_tools/mcp_tool_coder.py", line 1512, in convert_to_crewai_tool
+    response = await ctx.deps.openai_client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 1727, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1849, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1543, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1644, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 16:58:32,664 - mcp_tools - INFO - MCP TOOL CONVERSION SUCCESS: Added tool to tools.py: The `smithery_spotify_client` is an MCP tool designed to facilitate interaction with the Spotify API through a structured interface. It allows users to perform various operations such as searching for music, retrieving recommendations, and managing playlists. By utilizing the Model Context Protocol (MCP) system on Smithery, this tool provides a streamlined method for accessing Spotify's functionalities, making it easier for developers to integrate music-related features into their applications.
+2025-04-03 16:58:32,665 - mcp_tools - INFO - Validating tools.py content for common errors
+2025-04-03 16:58:32,665 - mcp_tools - INFO - Detected error: Tool class names are inconsistent across files
+2025-04-03 16:58:32,665 - mcp_tools - INFO - Applied fix: Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 16:58:32,666 - mcp_tools - INFO - Detected error: Missing alias class for backward compatibility
+2025-04-03 16:58:32,666 - mcp_tools - INFO - Applied fix: Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 16:58:32,666 - mcp_tools - INFO - MCP TOOL INTEGRATION: Applied 2 fixes to tools.py for common errors
+2025-04-03 16:58:32,666 - mcp_tools - INFO -   - Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 16:58:32,666 - mcp_tools - INFO -   - Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 16:58:32,666 - mcp_tools - INFO - MCP TOOL INTEGRATION COMPLETE: Generated tools.py with 1 tools
+2025-04-03 16:58:32,666 - mcp_tools - INFO - Validating tools.py content for common errors
+2025-04-03 16:58:32,666 - mcp_tools - INFO - Detected error: Tool class names are inconsistent across files
+2025-04-03 16:58:32,666 - mcp_tools - INFO - Applied fix: Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 16:58:32,667 - mcp_tools - INFO - Detected error: Missing alias class for backward compatibility
+2025-04-03 16:58:32,667 - mcp_tools - INFO - Applied fix: Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 16:58:32,667 - mcp_tools - INFO - MCP TOOL INTEGRATION: Applied 2 fixes to tools.py for common errors
+2025-04-03 16:58:32,667 - mcp_tools - INFO -   - Detected class naming inconsistency. Adding alias class for backward compatibility.
+2025-04-03 16:58:32,667 - mcp_tools - INFO -   - Adding alias class with MCPTool suffix for backward compatibility.
+2025-04-03 16:58:32,667 - mcp_tools - INFO - Generated and saved tools.py to /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/tools.py
+2025-04-03 16:58:32,667 - mcp_tools - INFO - Generated error_list.md documenting common errors and fixes at /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/error_list.md
+2025-04-03 16:58:32,667 - mcp_tools - INFO - Extracting tool class names from tools.py content
+2025-04-03 16:58:32,668 - mcp_tools - INFO - Found 2 classes with 'Tool' in name: ErrorMCPMCPTool, ErrorMCPMCPTool
+2025-04-03 16:58:32,668 - mcp_tools - INFO - Found 2 classes inheriting from Agent or Tool: ErrorMCPMCPTool, ErrorMCPMCPTool
+2025-04-03 16:58:32,668 - mcp_tools - INFO - Final extracted tool class names: ErrorMCPMCPTool
+2025-04-03 16:58:32,669 - mcp_tool_graph - INFO - Extracted tool class names: ['ErrorMCPMCPTool']
+2025-04-03 16:58:32,669 - mcp_tool_graph - INFO - Generated requirements.txt at /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/requirements.txt
+2025-04-03 16:58:32,669 - mcp_tool_graph - INFO - Using model o3-mini for template generation
+2025-04-03 16:58:32,669 - mcp_templates - INFO - Searching for MCP templates matching query: 'create agent that can suggest me song...'
+2025-04-03 16:58:32,669 - mcp_templates - INFO - Detected tool type 'spotify' from keyword 'song' in query
+2025-04-03 16:58:32,669 - mcp_templates - INFO - Detected tool types: spotify
+2025-04-03 16:58:32,670 - mcp_templates - INFO - Detected tool names: errormcpmcptool, error
+2025-04-03 16:58:32,670 - mcp_templates - INFO - Combined search text: 'create agent that can suggest me song create agent that can suggest me song MCP Tools for create age...'
+2025-04-03 16:58:32,670 - mcp_templates - INFO - Key matching terms: errormcpmcptool, error, spotify
+2025-04-03 16:58:32,850 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25errormcpmcptool%25 "HTTP/2 200 OK"
+2025-04-03 16:58:33,065 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25error%25 "HTTP/2 200 OK"
+2025-04-03 16:58:33,074 - mcp_templates - INFO - Found 1 purpose matches for 'error'
+2025-04-03 16:58:33,385 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&purpose=ilike.%25spotify%25 "HTTP/2 200 OK"
+2025-04-03 16:58:33,387 - mcp_templates - INFO - Found 1 purpose matches for 'spotify'
+2025-04-03 16:58:33,387 - mcp_templates - INFO - Boosted score for spotifyagent - exact tool name/type match
+2025-04-03 16:58:33,632 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25spotify%25 "HTTP/2 200 OK"
+2025-04-03 16:58:33,641 - mcp_templates - INFO - Found 1 folder matches for 'spotify'
+2025-04-03 16:58:33,758 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25errormcpmcptool%25 "HTTP/2 200 OK"
+2025-04-03 16:58:33,935 - httpx - INFO - HTTP Request: GET https://reizphewyhtrezuxzwuf.supabase.co/rest/v1/mcp_templates?select=%2A&folder_name=ilike.%25error%25 "HTTP/2 200 OK"
+2025-04-03 16:58:33,935 - mcp_templates - INFO - Using 2 direct matches from tool name/type
+2025-04-03 16:58:33,935 - mcp_templates - INFO - Using template: spotifyagent (similarity: 0.920)
+2025-04-03 16:58:33,935 - mcp_templates - INFO - Template purpose: The SpotifyAgent is an agent-based system designed to interact with the Spotify API using natural la...
+2025-04-03 16:58:33,935 - mcp_templates - INFO - Adapting agents code...
+2025-04-03 16:58:33,935 - mcp_templates - INFO - Calling OpenAI API to adapt agents code with enhanced transformation
+2025-04-03 16:58:34,401 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 16:58:34,402 - mcp_templates - ERROR - Error adapting agents code: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Traceback (most recent call last):
+  File "/Users/varunisrani/cogent1/archon/mcp_tools/mcp_template_integration.py", line 682, in adapt_agents_code
+    response = await openai_client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 1727, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1849, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1543, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1644, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 16:58:34,403 - mcp_templates - INFO - Saved adapted agents.py to /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/agents.py
+2025-04-03 16:58:35,666 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 16:58:36,173 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 16:58:36,173 - mcp_templates - ERROR - Error in direct_requirements_adaptation: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 16:58:36,174 - mcp_templates - INFO - Saved adapted tasks.py to /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/tasks.py
+2025-04-03 16:58:37,231 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 16:58:37,674 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 16:58:37,674 - mcp_templates - ERROR - Error in direct_requirements_adaptation: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 16:58:37,675 - mcp_templates - INFO - Saved adapted crew.py to /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/crew.py
+2025-04-03 16:58:37,675 - mcp_templates - INFO - Adapting main.py code...
+2025-04-03 16:58:38,922 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-03 16:58:39,312 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 16:58:39,313 - mcp_templates - ERROR - Error in direct_requirements_adaptation: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 16:58:39,313 - mcp_templates - WARNING - main_code is not a string, it's a <class 'dict'>. Attempting to convert.
+2025-04-03 16:58:39,314 - mcp_templates - INFO - Made main.py executable
+2025-04-03 16:58:39,314 - mcp_templates - INFO - Saved default main.py to /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/main.py
+2025-04-03 16:58:39,314 - mcp_templates - INFO - Generating default run_agent.py file...
+2025-04-03 16:58:39,792 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 16:58:39,793 - mcp_templates - ERROR - Error generating run_agent.py: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Traceback (most recent call last):
+  File "/Users/varunisrani/cogent1/archon/mcp_tools/mcp_template_integration.py", line 1994, in generate_run_agent_py
+    response = await openai_client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 1727, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1849, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1543, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1644, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 16:58:39,794 - mcp_templates - INFO - Made run_agent.py executable
+2025-04-03 16:58:39,794 - mcp_templates - INFO - Saved default run_agent.py to /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/run_agent.py
+2025-04-03 16:58:39,794 - mcp_templates - INFO - Created and made executable: /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/make_executable.sh
+2025-04-03 16:58:39,794 - mcp_templates - INFO - Created README.md with usage instructions
+2025-04-03 16:58:39,794 - mcp_templates - INFO - Performing final cross-file validation and consistency check...
+2025-04-03 16:58:39,795 - mcp_templates - INFO - Found agent classes: []
+2025-04-03 16:58:39,795 - mcp_templates - INFO - Found agent factory methods: []
+2025-04-03 16:58:39,795 - mcp_templates - INFO - No cross-file consistency issues detected
+2025-04-03 16:58:39,795 - mcp_tool_graph - INFO - Template generation successful! Created CrewAI project files.
+2025-04-03 16:58:40,368 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-04-03 16:58:40,369 - mcp_tools - ERROR - Error generating CrewAI README: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Traceback (most recent call last):
+  File "/Users/varunisrani/cogent1/archon/mcp_tools/mcp_tool_coder.py", line 3161, in generate_crewai_readme
+    response = await ctx.deps.openai_client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 1727, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1849, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1543, in request
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/varunisrani/.pyenv/versions/3.11.11/lib/python3.11/site-packages/openai/_base_client.py", line 1644, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-04-03 16:58:40,371 - mcp_tool_graph - INFO - Generated README.md at /Users/varunisrani/cogent1/output/generic_tool_20250403_165832/README.md
+2025-04-03 16:58:40,371 - mcp_tool_graph - INFO - Successfully generated complete CrewAI project in /Users/varunisrani/cogent1/output/generic_tool_20250403_165832
